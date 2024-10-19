@@ -54,7 +54,7 @@ class Car(models.Model):
         ("crossover", "Crossover"),
         ("sedan", "Sedan"),
     )
-    car_body = models.CharField(max_length=16, choices=CAR_CHOICES, default="sedan", null=True, blank=True)
+    car_body = models.CharField(max_length=18, choices=CAR_CHOICES, default="sedan", null=True, blank=True)
     COLOR_CHOICES = (
         ("white", "White"),
         ("black", "Black"),
@@ -75,7 +75,7 @@ class Car(models.Model):
         ("electric_engines", "Electric engines"),
         ("hybrid_installation", "Hybrid installation"),
     )
-    engine = models.CharField(max_length=16, choices=ENGINE_CHOICES, default="petrol", null=True, blank=True)
+    engine = models.CharField(max_length=20, choices=ENGINE_CHOICES, default="petrol", null=True, blank=True)
     TRANSMISSION_CHOICES =(
         ("manual", "Manual"),
         ("automatic", "Automatic"),
