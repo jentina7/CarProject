@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "car_store",
     'rest_framework',
     "phonenumber_field",
+    'django_filters'
 ]
 
 MIDDLEWARE = [
