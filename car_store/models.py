@@ -28,6 +28,9 @@ class CarModel(models.Model):
     model_name = models.CharField(max_length=16, unique=True)
     brand = models.ForeignKey(Brand, related_name="car_model", on_delete=CASCADE)
 
+    def __str__(self):
+        return self.model_name
+
 
 class Car(models.Model):
     car_name = models.CharField(max_length=32)
@@ -54,7 +57,8 @@ class Car(models.Model):
         ("crossover", "Crossover"),
         ("sedan", "Sedan"),
     )
-    car_body = models.CharField(max_length=18, choices=CAR_CHOICES, default="sedan", null=True, blank=True)
+
+    car_body = models.CharField(max_length=64, choices=CAR_CHOICES, default="sedan", null=True, blank=True)
     COLOR_CHOICES = (
         ("white", "White"),
         ("black", "Black"),
